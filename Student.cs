@@ -9,19 +9,25 @@ namespace IT1050Project3
 
         public Student(string name, Instructor teacher)
         {
-            Name = name;
-            Teacher = teacher;
-            Grade = 0;
+            this.Name = name;
+            this.Teacher = teacher;
+            this.Grade = 0;
         }
 
         public void SetGrade(int grade)
         {
-            Grade += grade;
+            this.Grade += grade;
         }
 
-        public string Print()
+        public void Print()
         {
-            return $"{Name} has an " + Grade + " from " + Teacher.Print;
+            System.Console.Write("Student ");
+            System.Console.Write(this.Name);
+            System.Console.Write(" has a grade of ");
+            System.Console.Write(this.Grade);
+            System.Console.Write(" from ");
+            Teacher.Print();
+            //System.Console.Write(this.Teacher);
         }
     }
 }

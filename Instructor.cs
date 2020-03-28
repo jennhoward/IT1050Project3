@@ -8,16 +8,20 @@ namespace IT1050Project3
 
         public Instructor(string name, string courseName)
         {
-            Name = name; 
-            CourseName = courseName;
+            this.Name = name;
+            this.CourseName = courseName;
         }
 
-        public void SetStudentGrade(Student studentName, int studentGrade)
+        public void SetStudentGrade(Student Name, int Grade)
         {
-            studentName.Grade += studentGrade;
+            Name.Grade += Grade;
         }
 
-        public string Print => Name + " teaches " + CourseName;
+        public void Print()
+        {
+            System.Console.Write("Professor " + this.Name);
+            System.Console.Write(" teaches " + this.CourseName);
+        }
     }
 }
 
